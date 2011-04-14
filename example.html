@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canvas Polar Transformation</title>
+<link rel="stylesheet" type="text/css" href="http://static.marvulous.co.uk/%C2%B5/css/reset.css" />
+<meta charset="UTF-8" />
+<script src=canvasPolarTransformation.js></script>
+</head>
+<body>
+<script>
+var
+	doc     = window.document,
+	canvas  = doc.createElement('canvas'),
+	ctx     = canvas.getContext('2d')
+;
+canvas.width = canvas.height = 512;
+doc.body.appendChild(canvas);
+
+ctx.fillStyle = 'black';
+ctx.fillRect(0,0,canvas.width,20);
+
+ctx.fillStyle = 'red';
+ctx.fillRect(0,64,canvas.width,20);
+
+doc.body.appendChild(canvasPolarTransform(canvas,1));
+doc.body.appendChild(canvasPolarTransform(canvas,.5));
+doc.body.appendChild(canvasPolarTransform(canvas,.25));
+doc.body.appendChild(canvasPolarTransform(canvas,.125));
+doc.body.appendChild(canvasPolarTransform(canvas,.0625));
+doc.body.appendChild(canvasPolarTransform(canvas,.03125));
+</script>
+</body>
+</html>
