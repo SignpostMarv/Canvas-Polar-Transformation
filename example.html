@@ -12,21 +12,23 @@ var
 	canvas  = doc.createElement('canvas'),
 	ctx     = canvas.getContext('2d')
 ;
-canvas.width = canvas.height = 512;
+canvas.width = canvas.height = 256;
 doc.body.appendChild(canvas);
 
-ctx.fillStyle = 'black';
+ctx.fillStyle = 'green';
+ctx.fillRect(64,0,20,canvas.height);
+ctx.fillRect(128,0,20,canvas.height);
+ctx.fillRect(192,0,20,canvas.height);
+
+ctx.fillStyle = 'blue';
 ctx.fillRect(0,0,canvas.width,20);
 
 ctx.fillStyle = 'red';
 ctx.fillRect(0,64,canvas.width,20);
 
-doc.body.appendChild(canvasPolarTransform(canvas,1));
-doc.body.appendChild(canvasPolarTransform(canvas,.5));
-doc.body.appendChild(canvasPolarTransform(canvas,.25));
-doc.body.appendChild(canvasPolarTransform(canvas,.125));
-doc.body.appendChild(canvasPolarTransform(canvas,.0625));
-doc.body.appendChild(canvasPolarTransform(canvas,.03125));
+
+
+doc.body.appendChild(canvasPolarTransform(canvas));
 </script>
 </body>
 </html>
