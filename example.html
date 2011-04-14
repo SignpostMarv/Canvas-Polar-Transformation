@@ -26,7 +26,10 @@ ctx.fillRect(0,0,canvas.width,20);
 ctx.fillStyle = 'red';
 ctx.fillRect(0,64,canvas.width,20);
 
-
+ctx.strokeStyle = 'black';
+ctx.moveTo(canvas.width - 1, 0);
+ctx.lineTo(0,canvas.height - 1);
+ctx.stroke();
 
 doc.body.appendChild(canvasPolarTransform(canvas));
 </script>

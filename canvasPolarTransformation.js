@@ -79,8 +79,10 @@
 					if(rt.r > radius){
 						continue;
 					}
+//					document.body.appendChild(document.createTextNode(rt.t));
+//					document.body.appendChild(document.createElement('br'));
 					var
-						sourceX    = Math.floor(radius + ((rt.t * (180/Math.PI)) / 180)),
+						sourceX    = Math.max(0,Math.floor(radius + ((rt.t / Math.PI) * radius)) - 1),
 						sourceY    = Math.max(0,Math.floor(((rt.r / radius) * scaled.height)) - 1),
 						sourceData = sctx.getImageData(sourceX,sourceY,1,1)
 					;
